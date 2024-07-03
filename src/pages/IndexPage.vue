@@ -1,8 +1,11 @@
 <template>
   <!-- <q-page class="row items-center justify-evenly"> -->
-  <q-page class="row justify-center">
-    <contacts/>
-    <work/>
+  <q-page class="col justify-center q-pa-md">
+    <!-- <q-card style="margin: 0 20vh;"> -->
+    <q-card >
+      <contacts/>
+      <work/>
+    </q-card>
   </q-page>
 </template>
 
