@@ -19,6 +19,17 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+const computeExperience = (startDate: Date) => {
+  const currentDate = new Date();
+  const totalMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + currentDate.getMonth() - startDate.getMonth();
+  return {
+    years: Math.floor(totalMonths / 12),
+    months: totalMonths % 12
+  };
+};
+
+const experience = computeExperience(new Date(2022, 6));
+
 const items = ref([
   {
     class: 'text-h5 text-bold',
@@ -50,11 +61,11 @@ const items = ref([
   },
   {
     class: 'text-h6 text-bold',
-    value: 'Frontend developer, 2 years',
+    value: `Frontend developer, ${experience.years}.${experience.months} years`,
   },
 ]);
-
 </script>
+
 
 <style scoped>
 
