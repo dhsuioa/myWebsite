@@ -6,7 +6,7 @@
       </q-toolbar-title>
       <q-toolbar>
         <q-toolbar-title>
-          <div class="row items-center no-wrap">
+          <div class="row items-center">
             <div class="text-h6 text-bold q-mr-md">Stereotech</div>
             <div class="text-subtitle2 text-italic">Junior Developer</div>
             <q-space></q-space>

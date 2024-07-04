@@ -1,5 +1,5 @@
 <template>
-  <q-list class="row items-start" style="max-width: 350px">
+  <q-list class="row" style="max-width: 350px">
     <q-item v-for="item in items">
       <q-item-section v-if="item.class" :class="item.class">{{ item.value }}</q-item-section>
       <q-item-section v-if="item.btnLabel">
@@ -21,15 +21,15 @@ import { ref } from 'vue';
 
 const items = ref([
   {
-    class: 'text-h5 text-bold q-mb-md',
+    class: 'text-h5 text-bold',
     value: 'Александр Литвиненко',
   },
   {
-    class: 'text-subtitle1 q-mb-md',
+    class: 'text-subtitle1',
     value: 'Россия, Волгоград',
   },
   {
-    class: 'text-subtitle1 q-mb-md',
+    class: 'text-subtitle1',
     value: '+7-927-538-00-77',
   },
   {
@@ -49,7 +49,7 @@ const items = ref([
     href: 'mailto:a27litvinenko@gmail.com'
   },
   {
-    class: 'text-h5 text-bold q-mb-md',
+    class: 'text-h6 text-bold',
     value: 'Frontend developer, 2 years',
   },
 ]);
