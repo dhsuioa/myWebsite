@@ -23,6 +23,7 @@
         </div>
       </q-timeline-entry>
     </q-timeline>
+    <q-separator />
   </div>
 </template>
   

@@ -13,7 +13,7 @@
       </q-item-section>
     </q-item>
   </q-list>
-  <q-separator />
+  <q-separator/>
 </template>
 
 <script setup lang="ts">
@@ -68,6 +68,10 @@ const items = ref([
 
 
 <style scoped>
+
+.q-item {
+  padding: 0px 16px;
+}
 
 .text-primary {
   text-decoration: underline;
