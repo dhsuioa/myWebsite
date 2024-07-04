@@ -1,19 +1,20 @@
 <template>
-  <q-list class="row" style="max-width: 350px">
-    <q-item v-for="item in items">
-      <q-item-section v-if="item.class" :class="item.class">{{ item.value }}</q-item-section>
-      <q-item-section v-if="item.btnLabel">
-        <q-btn
+  <q-card class="q-py-md">
+    <q-list dense class="row" style="max-width: 350px">
+      <q-item v-for="item in items">
+        <q-item-section v-if="item.class" :class="item.class">{{ item.value }}</q-item-section>
+        <q-item-section v-if="item.btnLabel">
+          <q-btn
           flat 
           :label="item.btnLabel" 
           no-caps 
           :href="item.href"
           class="text-primary"
-        />
-      </q-item-section>
-    </q-item>
-  </q-list>
-  <q-separator/>
+          />
+        </q-item-section>
+      </q-item>
+    </q-list>
+  </q-card>
 </template>
 
 <script setup lang="ts">
