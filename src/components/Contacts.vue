@@ -5,11 +5,11 @@
         <q-item-section v-if="item.class" :class="item.class">{{ item.value }}</q-item-section>
         <q-item-section v-if="item.btnLabel">
           <q-btn
-          flat 
-          :label="item.btnLabel" 
-          no-caps 
-          :href="item.href"
-          class="text-primary"
+            flat 
+            :label="item.btnLabel" 
+            no-caps 
+            :href="item.href"
+            color="primary"
           />
         </q-item-section>
       </q-item>
