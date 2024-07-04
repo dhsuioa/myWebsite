@@ -7,7 +7,7 @@
             <q-item-label>Темная тема</q-item-label>
           </q-item-section>
           <q-item-section avatar>
-            <q-toggle v-model="isDarkMode" @click="toggleDarkMode" />
+            <q-toggle v-model="isDarkMode" color="primary" @click="toggleDarkMode" />
           </q-item-section>
         </q-item>
       </q-list>

@@ -10,6 +10,7 @@
             no-caps 
             :href="item.href"
             color="primary"
+            target="_blank"
           />
         </q-item-section>
       </q-item>
