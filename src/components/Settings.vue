@@ -1,6 +1,9 @@
 <template>
-  <Dark />
-  <Color />
+  <div class="q-pa-md">
+    <h2 class="text-h6 q-mb-md">Настройки</h2>
+    <Dark />
+    <Color />
+  </div>
 </template>
 
 <script setup lang="ts">
