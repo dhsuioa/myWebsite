@@ -1,20 +1,18 @@
 <template>
-  <q-card class="q-py-md">
-    <q-list dense class="row" style="max-width: 350px">
-      <q-item v-for="item in items">
-        <q-item-section v-if="item.class" :class="item.class">{{ item.value }}</q-item-section>
-        <q-item-section v-if="item.btnLabel">
-          <q-btn
-            flat 
-            :label="item.btnLabel" 
-            no-caps 
-            :href="item.href"
-            color="primary"
-            target="_blank"
-          />
-        </q-item-section>
-      </q-item>
-    </q-list>
+  <q-card class="q-py-md justify-start flex" style="max-width: 345px">
+    <q-card-section v-for="(item, index) in items" :key="index" class="row items-center q-py-xs">
+      <div v-if="item.class" :class="item.class">{{ item.value }}</div>
+      <q-btn
+        v-if="item.btnLabel"
+        flat
+        :label="item.btnLabel"
+        no-caps
+        :href="item.href"
+        color="primary"
+        target="_blank"
+        class="q-ml-auto"
+      />
+    </q-card-section>
   </q-card>
 </template>
 
@@ -63,7 +61,8 @@ const items = ref([
   },
   {
     class: 'text-h6 text-bold',
-    value: `Frontend developer, ${experience.years}.${experience.months} years`,
+    value: `Frontend developer, ${experience.years} years`,
+    // value: `Frontend developer, ${experience.years}.${experience.months} years`,
   },
 ]);
 </script>

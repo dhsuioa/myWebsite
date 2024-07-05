@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-toolbar>
+    <q-toolbar class="row justify-end">
       <q-btn
         color="primary"
         dense
@@ -8,15 +8,15 @@
         round
         icon="mdi-menu"
         @click="toggleRightDrawer"
-      />
+        class="desktop-hide"
+        />
     </q-toolbar>
     <q-drawer
-      show-if-above 
-      v-model="rightDrawerOpen" 
-      side="right" 
+      v-model="rightDrawerOpen"
+      side="right"
       bordered
     >
-      <Settings />
+      <Settings @close-drawer="toggleRightDrawer"/>
     </q-drawer>
 
     <q-page-container>

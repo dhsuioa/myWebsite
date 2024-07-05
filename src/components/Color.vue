@@ -1,6 +1,6 @@
 <template>
-  <div class="q-pa-md row items-start q-gutter-md">
-    <q-color v-model="primaryColor" class="my-picker" />
+  <div class="q-pa-md row items-start q-gutter-md justify-center">
+    <q-color v-model="primaryColor"/>
   </div>
 </template>
 
@@ -23,7 +23,5 @@ const primaryColor = computed({
 </script>
 
 <style scoped>
-.my-picker {
-  max-width: 250px;
-}
+
 </style>
