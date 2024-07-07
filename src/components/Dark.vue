@@ -2,7 +2,7 @@
   <q-list>
     <q-item tag="label" v-ripple>
       <q-item-section>
-        <q-item-label>Темная тема</q-item-label>
+        <q-item-label>{{ $t('settings.theme') }}</q-item-label>
       </q-item-section>
       <q-item-section avatar>
         <q-toggle

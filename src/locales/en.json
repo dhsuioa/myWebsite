@@ -1,7 +1,58 @@
 {
+    "contacts": {
+        "name": "Alexander Litvinenko",
+        "city": "Russia, Volgograd"
+    },
+    
+    "work": {
+        "title": "Work Experience",
+        "years": "AUG 2022 - Present",
+        "quasar": "Development and improvement of the user interface using Vue 2/3 and Quasar",
+        "components": "Creating components for control panels and visualizing 3D printer metrics",
+        "configuring": "Implementing interactive control elements for configuring and monitoring 3D printers",
+        "integration": "Integrating and optimizing workflows: developing managers for automating calibration and equipment setup",
+        "optimization": "Application performance optimization",
+        "localization": "Application interface localization",
+        "calculators": "Developing data analysis tools, such as printing cost calculators and report generators",
+        "ci": "Writing technical documentation and participating in CI/CD processes using GitLab CI and Docker"
+    },
+
+    "education": {
+        "title": "Education",
+        "university": "VSTU, Volgograd",
+        "faculty": "Faculty of Electronics and Computer Engineering, majoring in \"Computer Science and Engineering\""
+    },
+    
+    "achievements": {
+        "title": "Additional Experience and Achievements",
+        "language": "English (B1), German (A2)",
+        "university": "Implemented university projects related to game development on Unity, machine learning projects, and projects using Web3 technologies"
+    },
+    
+    "technologies": {
+        "title": "Technologies",
+        "frameworks": "Frameworks and libraries: Vue 2/3, Vuex, Pinia, Vuetify, Quasar, Composition API",
+        "build": "Build tools and development environments: Webpack, Vite",
+        "language": "Programming and markup languages: HTML, CSS, SCSS, JavaScript, TypeScript, Python",
+        "git": "Version control and code management: Git, Bash",
+        "devops": "DevOps: GitLab CI, GitHub Actions, Docker",
+        "database": "Databases: PostgreSQL, MongoDB"
+    },
+
+    "hobby": {
+        "title": "Hobbies",
+        "guitar": "Playing guitar and piano",
+        "sport": "Enjoy active recreation, cycling, and sports"
+    },
+
     "settings": {
         "title": "Settings",
-        "language": "Language",
-        "theme": "Theme"
+        "theme": "Dark Theme",
+        "language": "Language"
+    },
+
+    "languages": {
+        "en": "English",
+        "ru": "Russian"
     }
 }

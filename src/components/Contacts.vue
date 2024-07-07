@@ -1,7 +1,7 @@
 <template>
   <q-card class="q-py-md justify-start flex" style="max-width: 345px">
     <q-card-section v-for="(item, index) in items" :key="index" class="row items-center q-py-xs">
-      <div v-if="item.class" :class="item.class">{{ item.value }}</div>
+      <div v-if="item.class" :class="item.class">{{ $t(item.value) }}</div>
       <q-btn
         v-if="item.btnLabel"
         flat
@@ -33,11 +33,11 @@ const experience = computeExperience(new Date(2022, 6));
 const items = ref([
   {
     class: 'text-h5 text-bold',
-    value: 'Александр Литвиненко',
+    value: 'contacts.name',
   },
   {
     class: 'text-subtitle1',
-    value: 'Россия, Волгоград',
+    value: 'contacts.city',
   },
   {
     class: 'text-subtitle1',
