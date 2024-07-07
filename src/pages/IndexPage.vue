@@ -4,7 +4,7 @@
       <contacts />
       <content 
         v-for="item in items"
-        :title="item.title"
+        :title="$t(item.title)"
         :description="item.description"
         :years="item.years"
         :details="item.details"
@@ -19,7 +19,7 @@ import Content from 'components/Content.vue';
 
 const items = [
   {
-    title: 'Опыт работы',
+    title: 'work.title',
     description: 'Stereotech, Junior Developer',
     years: 'АВГ 2022 - Н.В.',
     details: [
@@ -34,8 +34,8 @@ const items = [
     ]
   },
   {
-    title: 'Образование',
-    description: 'ВолгГТУ, Волгоград',
+    title: 'education.title',
+    description: 'education.university',
     years: '2020 - 2024',
     details: [
       'Факультет электроники и вычислительной техники, направление "Информатика и вычислительная техника"'

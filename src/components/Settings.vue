@@ -2,7 +2,7 @@
   <div class="q-pa-sm col">
     <q-toolbar >
       <q-toolbar-title>
-        Настройки
+        {{ $t('settings.title') }}
       </q-toolbar-title>
         <q-space />
         <q-btn
@@ -15,12 +15,14 @@
         />
       </q-toolbar>
     <Dark />
+    <Language />
     <Color />
   </div>
 </template>
 
 <script setup lang="ts">
 import Dark from './Dark.vue'
+import Language from './Language.vue'
 import Color from './Color.vue'
 
 const emits = defineEmits(['close-drawer']);
