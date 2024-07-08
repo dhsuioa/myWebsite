@@ -1,10 +1,9 @@
 <template>
   <div class="q-pa-sm col">
     <q-toolbar class="desktop-hide">
-      <q-toolbar-title class="text-no-wrap">
+      <q-toolbar-title>
         {{ $t('settings.title') }}
       </q-toolbar-title>
-        <q-space />
         <q-btn
           @click="closeDrawer"
           icon="mdi-close"
