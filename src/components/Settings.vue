@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-sm col">
-    <q-toolbar >
+    <q-toolbar class="desktop-hide">
       <q-toolbar-title>
         {{ $t('settings.title') }}
       </q-toolbar-title>
@@ -14,9 +14,17 @@
           round
         />
       </q-toolbar>
-    <Dark />
-    <Language />
-    <Color />
+      <div class="row q-gutter-md mobile-hide items-center">
+        <Dark />
+        <Language />
+        <Color />
+      </div>
+      <div class="desktop-hide">
+        <Dark />
+        <Language />
+        <Color />
+      </div>
+      
   </div>
 </template>
 

@@ -10,6 +10,9 @@
         @click="toggleRightDrawer"
         class="desktop-hide"
         />
+      <div class="mobile-hide q-mt-sm">
+       <Settings />
+      </div>
     </q-toolbar>
     <q-drawer
       v-model="rightDrawerOpen"

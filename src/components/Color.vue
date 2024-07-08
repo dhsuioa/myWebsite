@@ -1,5 +1,15 @@
 <template>
-  <div class="q-pa-md row items-start q-gutter-md justify-center">
+  <q-btn-dropdown 
+    outline 
+    class="mobile-hide" 
+    round 
+    color="primary" 
+    dropdown-icon="mdi-palette"
+    no-icon-animation
+  >
+    <q-color v-model="primaryColor"/>
+  </q-btn-dropdown>
+  <div class="desktop-hide q-pa-md row items-start q-gutter-md justify-center">
     <q-color v-model="primaryColor"/>
   </div>
 </template>
