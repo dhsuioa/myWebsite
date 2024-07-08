@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-sm col">
     <q-toolbar class="desktop-hide">
-      <q-toolbar-title>
+      <q-toolbar-title class="no-wrap">
         {{ $t('settings.title') }}
       </q-toolbar-title>
         <q-space />
