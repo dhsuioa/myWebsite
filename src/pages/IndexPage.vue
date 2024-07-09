@@ -10,10 +10,12 @@
         :details="item.details.map($t)"
       />
     </q-card>
+    <!-- <q-btn @click="generatePdf" label="Скачать PDF" class="q-mt-md" /> -->
   </q-page>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import Contacts from 'components/Contacts.vue';
 import Content from 'components/Content.vue';
 
@@ -65,6 +67,8 @@ const items = [
     ]
   },
 ];
+
+
 </script>
 
 <style scoped>

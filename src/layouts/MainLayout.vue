@@ -1,5 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
+    <!-- <q-toolbar class="row justify-end fixed-button"> -->
     <q-toolbar class="row justify-end">
       <q-btn
         color="primary"
@@ -39,3 +40,10 @@ const toggleRightDrawer = () => {
   rightDrawerOpen.value = !rightDrawerOpen.value
 }
 </script>
+
+<style scoped>
+/* .fixed-button {
+  position: fixed;
+  z-index: 1000;
+} */
+</style>

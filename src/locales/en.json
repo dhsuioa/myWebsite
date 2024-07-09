@@ -48,7 +48,8 @@
     "settings": {
         "title": "Settings",
         "theme": "Dark Theme",
-        "language": "Language"
+        "language": "Language",
+        "PDF" : "Download PDF"
     },
 
     "languages": {

@@ -48,7 +48,8 @@
     "settings": {
         "title": "Настройки",
         "theme": "Темная тема",
-        "language": "Язык"
+        "language": "Язык",
+        "PDF" : "Скачать PDF"
     },
 
     "languages": {

@@ -17,11 +17,13 @@
         <Dark />
         <Language />
         <Color />
+        <PDF />
       </div>
       <div class="desktop-hide">
         <Dark />
         <Language />
         <Color />
+        <PDF />
       </div>
       
   </div>
@@ -31,6 +33,7 @@
 import Dark from './Dark.vue'
 import Language from './Language.vue'
 import Color from './Color.vue'
+import PDF from './PDF.vue'
 
 const emits = defineEmits(['close-drawer']);
 
