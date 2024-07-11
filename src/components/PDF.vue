@@ -1,16 +1,20 @@
 <template>
-    <q-btn 
-        @click="generatePdf" 
-        color="primary" 
-        outline 
-        :label="$t('settings.PDF')" 
-
+    <q-btn
+        @click="generatePdf"
+        color="primary"
+        outline
+        :icon="isDesktop ? 'mdi-download' : undefined"
+        :label="isDesktop ? undefined : $t('settings.PDF')"
+        :round="isDesktop"
     />
 </template>
 
 <script setup lang="ts">
-
 import html2pdf from 'html2pdf.js';
+import { usePlatformStore } from '../stores/usePlatformStore';
+
+const platformStore = usePlatformStore();
+const isDesktop = platformStore.isDesktop;
 
 const generatePdf = () => {
     const element = document.querySelector('.q-page');

@@ -1,18 +1,17 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <!-- <q-toolbar class="row justify-end fixed-button"> -->
-    <q-toolbar class="row justify-end">
+    <q-toolbar class="row justify-end" :class="{ 'fixed-button': isDesktop }">
       <q-btn
+        v-if="!isDesktop"
         color="primary"
         dense
         flat
         round
         icon="mdi-menu"
         @click="toggleRightDrawer"
-        class="desktop-hide"
-        />
-      <div class="mobile-hide q-mt-sm">
-       <Settings />
+      />
+      <div v-if="isDesktop" class="q-mt-sm">
+        <Settings />
       </div>
     </q-toolbar>
     <q-drawer
@@ -26,24 +25,27 @@
     <q-page-container>
       <router-view />
     </q-page-container>
-
   </q-layout>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import Settings from '../components/Settings.vue'
+import { ref, computed } from 'vue';
+import { usePlatformStore } from '../stores/usePlatformStore';
+import Settings from '../components/Settings.vue';
 
-const rightDrawerOpen = ref(false)
+const platformStore = usePlatformStore();
+const rightDrawerOpen = ref(false);
 
 const toggleRightDrawer = () => {
-  rightDrawerOpen.value = !rightDrawerOpen.value
-}
+  rightDrawerOpen.value = !rightDrawerOpen.value;
+};
+
+const isDesktop = computed(() => platformStore.isDesktop);
 </script>
 
 <style scoped>
-/* .fixed-button {
+.fixed-button {
   position: fixed;
   z-index: 1000;
-} */
+}
 </style>

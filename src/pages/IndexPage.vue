@@ -1,38 +1,44 @@
 <template>
   <q-page class="col justify-center q-pa-md">
     <q-card class="responsive-margin">
-      <contacts />
-      <content 
-        v-for="item in items"
+      <Contacts />
+      <Content
+        v-for="(item, index) in items"
+        :key="index"
         :title="$t(item.title)"
         :description="item.description ? $t(item.description) : ''"
         :years="item.years ? $t(item.years) : ''"
-        :details="item.details.map($t)"
+        :details="item.details.map(detail => $t(detail))"
       />
     </q-card>
-    <!-- <q-btn @click="generatePdf" label="Скачать PDF" class="q-mt-md" /> -->
   </q-page>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import Contacts from 'components/Contacts.vue';
-import Content from 'components/Content.vue';
+import Contacts from '../components/Contacts.vue';
+import Content from '../components/Content.vue';
 
-const items = [
+interface Item {
+  title: string;
+  description?: string;
+  years?: string;
+  details: string[];
+}
+
+const items: Item[] = [
   {
     title: 'work.title',
     description: 'Stereotech, Junior Developer',
     years: 'work.years',
     details: [
-        'work.quasar',
-        'work.components',
-        'work.configuring',
-        'work.integration',
-        'work.optimization',
-        'work.localization',
-        'work.calculators',
-        'work.ci'
+      'work.quasar',
+      'work.components',
+      'work.configuring',
+      'work.integration',
+      'work.optimization',
+      'work.localization',
+      'work.calculators',
+      'work.ci'
     ]
   },
   {
@@ -67,8 +73,6 @@ const items = [
     ]
   },
 ];
-
-
 </script>
 
 <style scoped>

@@ -62,7 +62,6 @@ const items = ref([
   {
     class: 'text-h6 text-bold',
     value: `Frontend developer, ${experience.years} years`,
-    // value: `Frontend developer, ${experience.years}.${experience.months} years`,
   },
 ]);
 </script>

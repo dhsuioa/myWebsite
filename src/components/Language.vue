@@ -1,22 +1,23 @@
 <template>
-  <q-select
-    class="desktop-hide"
-    v-model="languageStore.currentLanguage"
-    :options="localeOptions"
-    :label="$t('settings.language')"
-    dense
-    options-dense
-    emit-value
-    map-options
-    @update:model-value="changeLocale"
-  >
-    <template v-slot:prepend>
-      <q-icon name="mdi-translate" />
-    </template>
-  </q-select>
+  <div>
+    <q-select
+      v-if="!isDesktop"
+      v-model="currentLanguage"
+      :options="localeOptions"
+      :label="$t('settings.language')"
+      dense
+      options-dense
+      emit-value
+      map-options
+      @update:model-value="changeLocale"
+    >
+      <template v-slot:prepend>
+        <q-icon name="mdi-translate" />
+      </template>
+    </q-select>
 
-  <div class="mobile-hide">
     <q-btn-dropdown
+      v-if="isDesktop"
       v-model="isDropdownOpen"
       color="primary"
       dropdown-icon="mdi-translate"
@@ -46,7 +47,8 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { useLanguageStore } from 'stores/useLanguageStore';
+import { useLanguageStore } from '../stores/useLanguageStore';
+import { usePlatformStore } from '../stores/usePlatformStore';
 
 const { availableLocales, t } = useI18n();
 const languageStore = useLanguageStore();
@@ -66,4 +68,9 @@ function changeLocale(newLocale: "en" | "ru" | "en-EN" | "ru-RU") {
   languageStore.setLanguage(newLocale);
   isDropdownOpen.value = false;
 }
+
+const isDesktop = computed(() => {
+  const platform = usePlatformStore();
+  return platform.isDesktop;
+});
 </script>
