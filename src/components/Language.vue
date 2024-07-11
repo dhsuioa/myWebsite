@@ -45,7 +45,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useLanguageStore } from '../stores/useLanguageStore';
 import { usePlatformStore } from '../stores/usePlatformStore';
@@ -73,4 +73,9 @@ const isDesktop = computed(() => {
   const platform = usePlatformStore();
   return platform.isDesktop;
 });
+
+onMounted(() => {
+  languageStore.setLanguage(languageStore.currentLanguage as "en" | "ru" | "en-EN" | "ru-RU");
+});
 </script>
+
