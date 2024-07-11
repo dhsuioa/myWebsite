@@ -1,7 +1,7 @@
 {
   "name": "mywebsite",
   "version": "0.0.1",
-  "description": "A Quasar Project",
+  "description": "Resume Project",
   "productName": "Resume Litvinenko",
   "author": "Alexandr Litvinenko <a27litvinenko@gmail.com>",
   "private": true,
