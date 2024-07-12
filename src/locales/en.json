@@ -49,6 +49,8 @@
         "title": "Settings",
         "theme": "Dark Theme",
         "language": "Language",
+        "chooseLanguage": "Choose language",
+        "chooseColor": "Choose color",
         "PDF" : "Download PDF"
     },
 

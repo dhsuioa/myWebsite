@@ -7,9 +7,9 @@
       :label="isDesktop ? undefined : $t('settings.PDF')"
       :round="isDesktop"
     >
-    <!-- <q-tooltip v-if="isDesktop" class="text-subtitle2">
+    <q-tooltip v-if="isDesktop" class="text-subtitle2">
         {{ $t('settings.PDF') }}
-    </q-tooltip> -->
+    </q-tooltip>
     </q-btn>
   </template>
   

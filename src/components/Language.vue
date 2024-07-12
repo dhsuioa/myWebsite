@@ -25,6 +25,11 @@
       round
       no-icon-animation
     >
+    <template v-slot:label>
+      <q-tooltip v-if="isDesktop" class="text-subtitle2">
+        {{ $t('settings.chooseLanguage') }}
+    </q-tooltip>
+    </template>
       <q-list>
         <q-item
           v-for="locale in localeOptions"

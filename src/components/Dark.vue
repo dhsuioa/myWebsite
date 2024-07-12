@@ -24,9 +24,9 @@
       :icon="isDarkMode ? 'mdi-weather-night' : 'mdi-white-balance-sunny'"
       @click="toggleDarkMode"
     >
-    <!-- <q-tooltip v-if="isDesktop" class="text-subtitle2">
+    <q-tooltip v-if="isDesktop" class="text-subtitle2">
         {{ $t('settings.theme') }}
-    </q-tooltip> -->
+    </q-tooltip>
     </q-btn>
   </div>
 </template>

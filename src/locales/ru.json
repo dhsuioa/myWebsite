@@ -49,6 +49,8 @@
         "title": "Настройки",
         "theme": "Темная тема",
         "language": "Язык",
+        "chooseLanguage": "Выбрать язык",
+        "chooseColor": "Выбрать цвет",
         "PDF" : "Скачать PDF"
     },
 

@@ -8,6 +8,11 @@
       dropdown-icon="mdi-palette"
       no-icon-animation
     >
+    <template v-slot:label>
+      <q-tooltip v-if="isDesktop" class="text-subtitle2">
+        {{ $t('settings.chooseColor') }}
+    </q-tooltip>
+    </template>
       <q-color v-model="primaryColor"/>
     </q-btn-dropdown>
 
