@@ -28,7 +28,7 @@ interface Item {
 const items: Item[] = [
   {
     title: 'work.title',
-    description: 'Stereotech, Junior Developer',
+    description: 'Stereotech, Frontend Developer',
     years: 'work.years',
     details: [
       'work.quasar',
